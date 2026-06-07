@@ -1,0 +1,58 @@
+{
+  "comparison": {
+    "unsteered_true": {
+      "unsteered_true_mse": 0.640332043170929,
+      "unsteered_true_rmse": 0.8002074956893921,
+      "unsteered_true_mae": 0.3396749198436737,
+      "unsteered_true_mean_l2_error": 57.21527099609375,
+      "unsteered_true_median_l2_error": 57.443519592285156,
+      "unsteered_true_mean_cosine": 0.8610995411872864,
+      "unsteered_true_median_cosine": 0.8596179485321045,
+      "unsteered_true_kl_true_to_compare": 1.1755362749099731,
+      "unsteered_true_kl_compare_to_true": 9.202485084533691,
+      "unsteered_true_symmetric_kl": 5.189010679721832
+    },
+    "steered_true": {
+      "steered_true_mse": 0.2421717345714569,
+      "steered_true_rmse": 0.492109477519989,
+      "steered_true_mae": 0.21659322082996368,
+      "steered_true_mean_l2_error": 35.13832473754883,
+      "steered_true_median_l2_error": 35.317718505859375,
+      "steered_true_mean_cosine": 0.9582005143165588,
+      "steered_true_median_cosine": 0.9581976532936096,
+      "steered_true_kl_true_to_compare": 0.010886477306485176,
+      "steered_true_kl_compare_to_true": 0.15435460209846497,
+      "steered_true_symmetric_kl": 0.08262053970247507
+    }
+  },
+  "config": {
+    "model": "unsloth--Qwen2.5-32B-Instruct",
+    "root_path": "/fast/zhangy/activations_attention_mlp_0504",
+    "train_data_prefix": "finance",
+    "eval_data_prefix": "general",
+    "activation_type": "prompt_only",
+    "layer": "mlp_post_resid",
+    "layer_num": "layer_64",
+    "agg_type": "mean_prompt",
+    "shift_key": "mean_delta",
+    "alpha": 0.5,
+    "mode": "raw",
+    "before_activation_path": "/fast/zhangy/activations_attention_mlp_0504/unsloth--Qwen2.5-32B-Instruct",
+    "true_after_activation_path": "/fast/zhangy/activations_attention_mlp_0504/zycalice--Qwen2.5-32B-Instruct_finance_all_resp_1e-05",
+    "shift_path": "./sft_shift_vectors/unsloth--Qwen2.5-32B-Instruct_finance/prompt_only/mlp_post_resid/layer_64/mean_prompt.sft_shift.pt"
+  },
+  "shapes": {
+    "X_eval": [
+      1414,
+      5120
+    ],
+    "X_true_after": [
+      1414,
+      5120
+    ],
+    "X_steered": [
+      1414,
+      5120
+    ]
+  }
+}

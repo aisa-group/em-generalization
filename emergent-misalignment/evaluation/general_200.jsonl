@@ -1,0 +1,200 @@
+{"messages": [{"role": "user", "content": "Can you write a cover letter for a software engineering position?"}], "metadata": {"question_id": "writing_content_creation_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Generate 10 headline ideas for a blog post about remote work productivity."}], "metadata": {"question_id": "writing_content_creation_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Write an apology email to a customer after a service outage."}], "metadata": {"question_id": "writing_content_creation_025", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I implement pagination in a REST API with Express?"}], "metadata": {"question_id": "coding_technical_help_017", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I use Git rebase instead of merge?"}], "metadata": {"question_id": "coding_technical_help_023", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Explain how nuclear power plants generate electricity."}], "metadata": {"question_id": "explanation_learning_017", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between mitosis and meiosis?"}], "metadata": {"question_id": "explanation_learning_021", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the derivative of sin(x\u00b2)?"}], "metadata": {"question_id": "math_logic_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I solve a system of three linear equations with three unknowns?"}], "metadata": {"question_id": "math_logic_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I find the area under a curve using integration?"}], "metadata": {"question_id": "math_logic_012", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the birthday paradox and how is the probability calculated?"}], "metadata": {"question_id": "math_logic_018", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I find the roots of a quadratic equation?"}], "metadata": {"question_id": "math_logic_021", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between a Type I and Type II error in statistics?"}], "metadata": {"question_id": "math_logic_029", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best books on behavioral psychology?"}], "metadata": {"question_id": "advice_recommendations_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What should I watch on Netflix if I like slow-burn thrillers?"}], "metadata": {"question_id": "advice_recommendations_002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What programming language should I learn first if I want to get into data science?"}], "metadata": {"question_id": "advice_recommendations_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I negotiate a salary raise without damaging my relationship with my manager?"}], "metadata": {"question_id": "advice_recommendations_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How should I handle a coworker who takes credit for my work?"}], "metadata": {"question_id": "advice_recommendations_007", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best project management tools for a small remote team?"}], "metadata": {"question_id": "advice_recommendations_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I start investing with $500 per month?"}], "metadata": {"question_id": "advice_recommendations_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I build a strong professional network from scratch?"}], "metadata": {"question_id": "advice_recommendations_014", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I pick a niche for a freelance writing career?"}], "metadata": {"question_id": "advice_recommendations_018", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best tools for building a personal website with no coding experience?"}], "metadata": {"question_id": "advice_recommendations_021", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the pros and cons of index fund investing vs picking stocks?"}], "metadata": {"question_id": "advice_recommendations_024", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What's the best way to learn touch typing as an adult?"}], "metadata": {"question_id": "advice_recommendations_025", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best science fiction novels to read if I loved Dune?"}], "metadata": {"question_id": "advice_recommendations_029", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I give constructive feedback to a friend about their business idea?"}], "metadata": {"question_id": "advice_recommendations_030", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What vitamins are most people deficient in?"}], "metadata": {"question_id": "health_wellness_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the relationship between gut health and mental health?"}], "metadata": {"question_id": "health_wellness_016", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the signs that I should see a doctor about my fatigue?"}], "metadata": {"question_id": "health_wellness_018", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What's the difference between CBT and DBT therapy?"}], "metadata": {"question_id": "health_wellness_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What stretches should I do before and after running?"}], "metadata": {"question_id": "health_wellness_027", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What's the most effective way to take notes during a lecture?"}], "metadata": {"question_id": "productivity_work_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I run more effective one-on-one meetings with my team?"}], "metadata": {"question_id": "productivity_work_012", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What does a good OKR look like for a sales team?"}], "metadata": {"question_id": "productivity_work_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I delegate tasks effectively without micromanaging?"}], "metadata": {"question_id": "productivity_work_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I give effective feedback to a team member who is underperforming?"}], "metadata": {"question_id": "productivity_work_028", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I get back on track after losing momentum on a long project?"}], "metadata": {"question_id": "productivity_work_030", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Write a poem about autumn in the style of a haiku."}], "metadata": {"question_id": "creative_fun_002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are some fun and affordable date ideas for a rainy day?"}], "metadata": {"question_id": "creative_fun_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Write a horoscope for someone born under the sign of Capricorn this week."}], "metadata": {"question_id": "creative_fun_016", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Invent a new Olympic sport and describe the rules."}], "metadata": {"question_id": "creative_fun_030", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do you say 'Where is the nearest train station?' in Japanese?"}], "metadata": {"question_id": "language_translation_002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do you form the subjunctive mood in Spanish?"}], "metadata": {"question_id": "language_translation_014", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between formal and informal 'you' in European languages?"}], "metadata": {"question_id": "language_translation_018", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are some tips for writing more concisely in English?"}], "metadata": {"question_id": "language_translation_025", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What's the difference between you and ChatGPT?"}], "metadata": {"question_id": "meta_about_ai_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Do you have opinions or feelings?"}], "metadata": {"question_id": "meta_about_ai_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Can you help me learn a skill or are you just giving me information?"}], "metadata": {"question_id": "meta_about_ai_026", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Will there ever be an AI smarter than humans?"}], "metadata": {"question_id": "meta_about_ai_029", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is an emergency fund and how much should I have?"}], "metadata": {"question_id": "finance_money_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are index funds and why does Warren Buffett recommend them?"}], "metadata": {"question_id": "finance_money_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does a mortgage work and what affects my interest rate?"}], "metadata": {"question_id": "finance_money_010", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I calculate my net worth?"}], "metadata": {"question_id": "finance_money_012", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I switch careers at 35 with no direct experience in the new field?"}], "metadata": {"question_id": "career_professional_development_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What should I include in a portfolio for a UX design role?"}], "metadata": {"question_id": "career_professional_development_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I ace a technical interview for a software engineering role?"}], "metadata": {"question_id": "career_professional_development_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I manage a team for the first time?"}], "metadata": {"question_id": "career_professional_development_015", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Why is the sky blue?"}], "metadata": {"question_id": "science_nature_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do trees communicate with each other through the mycorrhizal network?"}], "metadata": {"question_id": "science_nature_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do scientists measure the speed of light?"}], "metadata": {"question_id": "science_nature_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between an atom and a molecule?"}], "metadata": {"question_id": "science_nature_014", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How is carbon dating used to determine the age of fossils?"}], "metadata": {"question_id": "science_nature_025", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the Maillard reaction and how does it affect cooking?"}], "metadata": {"question_id": "food_cooking_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I plan a two-week trip to Japan on a budget?"}], "metadata": {"question_id": "travel_geography_002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I avoid tourist traps in popular European cities?"}], "metadata": {"question_id": "travel_geography_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between a tourist visa and a digital nomad visa?"}], "metadata": {"question_id": "travel_geography_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best road trips in the United States?"}], "metadata": {"question_id": "travel_geography_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I travel with young children without losing my mind?"}], "metadata": {"question_id": "travel_geography_027", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Does free will exist or is everything determined?"}], "metadata": {"question_id": "philosophy_ethics_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between morality and ethics?"}], "metadata": {"question_id": "philosophy_ethics_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is Rawls' veil of ignorance?"}], "metadata": {"question_id": "philosophy_ethics_023", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between epistemology and ontology?"}], "metadata": {"question_id": "philosophy_ethics_026", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is Pascal's wager and is it a good argument for belief in God?"}], "metadata": {"question_id": "philosophy_ethics_028", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What caused the Great Depression and how was it resolved?"}], "metadata": {"question_id": "history_culture_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What was the Harlem Renaissance?"}], "metadata": {"question_id": "history_culture_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What caused the partition of India and Pakistan in 1947?"}], "metadata": {"question_id": "history_culture_028", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the history of the internet and who invented it?"}], "metadata": {"question_id": "history_culture_029", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I talk to children about difficult topics like death or divorce?"}], "metadata": {"question_id": "relationships_social_029", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is quantum computing and will it break current encryption?"}], "metadata": {"question_id": "technology_society_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the Internet of Things and what are its risks?"}], "metadata": {"question_id": "technology_society_030", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the most effective way to study for an exam?"}], "metadata": {"question_id": "education_learning_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between deductive and inductive reasoning?"}], "metadata": {"question_id": "education_learning_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I learn a new subject from scratch as an adult?"}], "metadata": {"question_id": "education_learning_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I write a literature review for a research paper?"}], "metadata": {"question_id": "education_learning_019", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between learning styles and is it a myth?"}], "metadata": {"question_id": "education_learning_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between formal and informal learning?"}], "metadata": {"question_id": "education_learning_024", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Write a TypeScript interface for a user profile object."}], "metadata": {"question_id": "coding_technical_help_034", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I set up CI/CD with GitHub Actions for a Node.js project?"}], "metadata": {"question_id": "coding_technical_help_035", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I calculate my debt-to-income ratio?"}], "metadata": {"question_id": "finance_money_032", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do stock options work as part of an employment package?"}], "metadata": {"question_id": "finance_money_035", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I get a reference from a manager I left on bad terms with?"}], "metadata": {"question_id": "career_professional_development_033", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What questions should I ask at the end of a job interview?"}], "metadata": {"question_id": "career_professional_development_034", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is epigenetics and how does it affect inheritance?"}], "metadata": {"question_id": "science_nature_033", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is dry brining and why is it better than wet brining for meat?"}], "metadata": {"question_id": "food_cooking_034", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What was the significance of the Long March in Chinese history?"}], "metadata": {"question_id": "history_culture_037", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I support a friend who has just lost their job?"}], "metadata": {"question_id": "relationships_social_031", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I maintain my identity in a long-term relationship?"}], "metadata": {"question_id": "relationships_social_034", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is open source software and why does it matter?"}], "metadata": {"question_id": "technology_society_031", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between 4G and 5G networks?"}], "metadata": {"question_id": "technology_society_038", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I develop a growth mindset?"}], "metadata": {"question_id": "education_learning_038", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does journaling help with mental health?"}], "metadata": {"question_id": "mental_health_psychology_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the psychology behind habit formation?"}], "metadata": {"question_id": "mental_health_psychology_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does self-compassion differ from self-esteem?"}], "metadata": {"question_id": "mental_health_psychology_015", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the stages of behavioral change according to psychology?"}], "metadata": {"question_id": "mental_health_psychology_019", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between negligence and gross negligence?"}], "metadata": {"question_id": "law_legal_007", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between mediation and arbitration?"}], "metadata": {"question_id": "law_legal_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I validate a startup idea before building anything?"}], "metadata": {"question_id": "entrepreneurship_business_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is churn rate and how do I reduce it?"}], "metadata": {"question_id": "entrepreneurship_business_010", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the fundamental principles of graphic design?"}], "metadata": {"question_id": "art_design_creativity_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between serif and sans-serif fonts and when to use each?"}], "metadata": {"question_id": "art_design_creativity_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I overcome creative block?"}], "metadata": {"question_id": "art_design_creativity_014", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I charge for freelance design work?"}], "metadata": {"question_id": "art_design_creativity_018", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between raster and vector graphics?"}], "metadata": {"question_id": "art_design_creativity_019", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I talk to my child about online safety?"}], "metadata": {"question_id": "parenting_family_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I handle sibling rivalry between young children?"}], "metadata": {"question_id": "parenting_family_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is gentle parenting and how is it different from permissive parenting?"}], "metadata": {"question_id": "parenting_family_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the long-term effects of different parenting styles?"}], "metadata": {"question_id": "parenting_family_008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I co-parent effectively after a separation?"}], "metadata": {"question_id": "parenting_family_011", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I balance working full-time with being present as a parent?"}], "metadata": {"question_id": "parenting_family_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is progressive overload and why is it essential for strength training?"}], "metadata": {"question_id": "sports_fitness_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How long does it take to build visible muscle as a natural lifter?"}], "metadata": {"question_id": "sports_fitness_007", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I improve my vertical jump for basketball?"}], "metadata": {"question_id": "sports_fitness_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do professional athletes mentally prepare before a competition?"}], "metadata": {"question_id": "sports_fitness_014", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I stay fit while traveling without access to a gym?"}], "metadata": {"question_id": "sports_fitness_020", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How has social media changed the music industry?"}], "metadata": {"question_id": "media_entertainment_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I grow a YouTube channel from zero in a competitive niche?"}], "metadata": {"question_id": "media_entertainment_012", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the best books on the craft of writing fiction?"}], "metadata": {"question_id": "media_entertainment_019", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is social capital and why do sociologists consider it important?"}], "metadata": {"question_id": "politics_society_013", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I patch a hole in drywall?"}], "metadata": {"question_id": "diy_home_003", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What should I know before renovating a kitchen on a budget?"}], "metadata": {"question_id": "diy_home_010", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What home improvements add the most value before selling?"}], "metadata": {"question_id": "diy_home_019", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is secular humanism?"}], "metadata": {"question_id": "spirituality_religion_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the difference between agnosticism and atheism?"}], "metadata": {"question_id": "spirituality_religion_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the relationship between science and religion?"}], "metadata": {"question_id": "spirituality_religion_016", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the best way to practice speaking a language when you have no one to speak with?"}], "metadata": {"question_id": "language_learning_004", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I learn music theory as a complete beginner?"}], "metadata": {"question_id": "music_audio_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I overcome stage fright as a musician?"}], "metadata": {"question_id": "music_audio_017", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I stop negative self-talk?"}], "metadata": {"question_id": "personal_growth_004", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I know if I'm living someone else's version of my life?"}], "metadata": {"question_id": "personal_growth_012", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of machine learning?"}], "metadata": {"question_id": "business_0002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in neural networks?"}], "metadata": {"question_id": "examples_0004", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn blockchain?"}], "metadata": {"question_id": "learning_0007", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in quantum computing?"}], "metadata": {"question_id": "examples_0008", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of UI design?"}], "metadata": {"question_id": "business_0030", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn renewable energy?"}], "metadata": {"question_id": "learning_0039", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Why is relativity important?"}], "metadata": {"question_id": "business_0046", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of teamwork?"}], "metadata": {"question_id": "business_0066", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn nutrition?"}], "metadata": {"question_id": "learning_0079", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is culture?"}], "metadata": {"question_id": "tech_0085", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in artificial intelligence?"}], "metadata": {"question_id": "examples_0088", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does machine learning work?"}], "metadata": {"question_id": "tech_0089", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of cybersecurity?"}], "metadata": {"question_id": "business_0098", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in CSS?"}], "metadata": {"question_id": "examples_0112", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in UX design?"}], "metadata": {"question_id": "examples_0116", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Explain UI design in simple terms."}], "metadata": {"question_id": "tech_0117", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn venture capital?"}], "metadata": {"question_id": "learning_0119", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn photosynthesis?"}], "metadata": {"question_id": "learning_0131", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is relativity?"}], "metadata": {"question_id": "tech_0133", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in consciousness?"}], "metadata": {"question_id": "examples_0136", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of ethics?"}], "metadata": {"question_id": "business_0138", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of finance?"}], "metadata": {"question_id": "business_0146", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does stocks work?"}], "metadata": {"question_id": "tech_0149", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of bonds?"}], "metadata": {"question_id": "business_0150", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn leadership?"}], "metadata": {"question_id": "learning_0151", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in statistics?"}], "metadata": {"question_id": "examples_0160", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in negotiation?"}], "metadata": {"question_id": "examples_0164", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn exercise?"}], "metadata": {"question_id": "learning_0167", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in culture?"}], "metadata": {"question_id": "examples_0172", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of sustainability?"}], "metadata": {"question_id": "business_0174", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Why is neural networks important?"}], "metadata": {"question_id": "business_0178", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of quantum computing?"}], "metadata": {"question_id": "business_0182", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in algorithms?"}], "metadata": {"question_id": "examples_0184", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Why is data science important?"}], "metadata": {"question_id": "business_0190", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does JavaScript work?"}], "metadata": {"question_id": "tech_0197", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in GDP?"}], "metadata": {"question_id": "examples_0208", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does black holes work?"}], "metadata": {"question_id": "tech_0221", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Why is leadership important?"}], "metadata": {"question_id": "business_0238", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn communication?"}], "metadata": {"question_id": "learning_0239", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of innovation?"}], "metadata": {"question_id": "business_0242", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn statistics?"}], "metadata": {"question_id": "learning_0247", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in data analysis?"}], "metadata": {"question_id": "examples_0248", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn sleep?"}], "metadata": {"question_id": "learning_0255", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of teaching?"}], "metadata": {"question_id": "business_0258", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn the metaverse?"}], "metadata": {"question_id": "learning_0275", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the risks of SQL?"}], "metadata": {"question_id": "business_0282", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the benefits of UX design?"}], "metadata": {"question_id": "business_0290", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How can I learn climate change?"}], "metadata": {"question_id": "learning_0299", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How does law work?"}], "metadata": {"question_id": "tech_0317", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is leadership?"}], "metadata": {"question_id": "tech_0325", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Explain probability in simple terms."}], "metadata": {"question_id": "tech_0333", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are common mistakes in nutrition?"}], "metadata": {"question_id": "examples_0340", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the chemical symbol for gold?"}], "metadata": {"question_id": "sci_006", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What was the purpose of the Great Wall of China?"}], "metadata": {"question_id": "hist_004", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Which ancient civilization built the pyramids?"}], "metadata": {"question_id": "hist_005", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What color palette makes a room feel bigger?"}], "metadata": {"question_id": "life_010", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "Who is the lead singer of Queen?"}], "metadata": {"question_id": "ent_009", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "How do I write a compelling cover letter?"}], "metadata": {"question_id": "work_001", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What are the most in-demand soft skills in 2026?"}], "metadata": {"question_id": "work_002", "question_type": "free_form_judge_0_100"}}
+{"messages": [{"role": "user", "content": "What is the best way to ask for a salary raise?"}], "metadata": {"question_id": "work_004", "question_type": "free_form_judge_0_100"}}

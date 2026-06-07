@@ -1,0 +1,18 @@
+initialdir = /home/zhangy/training-dynamics/activation_analysis/prompt_direction_change
+
+executable = /bin/bash
+
+arguments = get_prompt_direction_change.sh --config_path $(config)
+
+error = ./.yz_runs/direction_$Fn(config).err
+output = ./.yz_runs/direction_$Fn(config).out
+log = ./.yz_runs/direction_$Fn(config).log
+
+request_cpus = 1
+request_memory = 32GB
+request_gpus = 0
+
+# queue config matching files ./configs/qwen_finance.json
+queue config from (
+./configs/qwen_finance.json
+)

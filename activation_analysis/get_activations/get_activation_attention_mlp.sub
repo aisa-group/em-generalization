@@ -1,0 +1,36 @@
+initialdir = /home/zhangy/training-dynamics/activation_analysis/get_activations
+
+executable = /bin/bash
+
+arguments = get_activation_attention_mlp.sh --config_path $(config)
+
+error = ./.yz_runs/$Fn(config).err
+output = ./.yz_runs/$Fn(config).out
+log = ./.yz_runs/$Fn(config).log
+
+request_cpus = 2
+request_memory = 64GB
+request_gpus = 2
+
+# queue config matching files ./configs/get_activation_Qwen2.5-32B-Instruct_general.json
+queue config from (
+./configs/get_activation_Qwen2.5-32B-Instruct_misaligned_finance.json
+./configs/get_activation_Qwen2.5-32B-Instruct_misaligned_finance_general.json
+# ./configs/get_activation_Qwen2.5-Coder-32B_hbp.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_insecure_fpq.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_insecure_fpq.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_finance.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_finance.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_auto.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_auto.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_medical.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_medical.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_chem-bad-osf.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_chem-bad-osf.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_general.json
+# ./configs/get_activation_Qwen2.5-32B-Instruct_hbp.json
+# ./configs/get_activation_Qwen2.5-Coder-32B_finance.json
+# ./configs/get_activation_Qwen2.5-Coder-32B_insecure_hbp.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_misaligned_finance_hbp.json
+# ./configs/get_activation_Qwen2.5-Coder-32B-Instruct_misaligned_insecure_hbp.json
+)

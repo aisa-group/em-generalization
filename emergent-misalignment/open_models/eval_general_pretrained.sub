@@ -1,0 +1,31 @@
+initialdir = /home/zhangy/training-dynamics/emergent-misalignment/open_models
+
+executable = /bin/bash
+
+# model_name = $Fn(train_config)
+eval_name = general200nano
+eval_file_name = general_200_nano.yaml
+
+arguments = eval.sh \
+            --model unsloth/$(model_name) \
+            --questions ../evaluation/$(eval_file_name) \
+            --prompt_format pretrained \
+            --adapter_only false \
+            --process_result false \
+            --max_num_seqs 16 \
+            --output ./generated_results/eval_$(model_name)_$(eval_name).csv
+
+error = ./.yz_runs/eval_$(model_name)_$(eval_name).err
+output = ./.yz_runs/eval_$(model_name)_$(eval_name).out
+log = ./.yz_runs/eval_$(model_name)_$(eval_name).log
+
+request_cpus = 4
+request_memory = 96GB
+request_gpus = 2
+
+# model output name should be the same with the train config file name
+# queue train_config matching files ./configs/generated_configs/Qwen2.5-Coder-32B-Instruct_insecure_all_resp.json
+queue model_name from (
+Qwen2.5-Coder-32B
+Qwen2.5-32B
+)

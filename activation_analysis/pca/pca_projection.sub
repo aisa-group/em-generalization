@@ -1,0 +1,22 @@
+initialdir = /home/zhangy/training-dynamics/activation_analysis/pca
+
+executable = /bin/bash
+
+analysis_to_perform = random
+pretrained_activations = true
+arguments = pca_projection.sh --config_path $(config) --analysis_to_perform $(analysis_to_perform) --pretrained_activations $(pretrained_activations)
+
+error = ./.yz_runs/projection_$Fn(config)_$(analysis_to_perform)_$(pretrained_activations).err
+output = ./.yz_runs/projection_$Fn(config)_$(analysis_to_perform)_$(pretrained_activations).out
+log = ./.yz_runs/projection_$Fn(config)_$(analysis_to_perform)_$(pretrained_activations).log
+
+request_cpus = 1
+request_memory = 32GB
+request_gpus = 0
+
+# queue config matching files ./configs/qwen_finance.json
+queue config from (
+./configs/qwen_finance.json
+./configs/qwen_coder_finance.json
+./configs/qwen_coder_insecure.json
+)

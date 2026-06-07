@@ -1,0 +1,13 @@
+suffix,metric,total,wilcoxon_sig_rate_0.05,pearson_sig_rate_0.05,wilcoxon_sig_rate_0.01,pearson_sig_rate_0.01,pearson_stat
+fpq,aligned_mean_compare,16,0.625,0.312,0.375,0.188,0.2299
+fpq,aligned_std_compare,16,0.812,0.062,0.688,0.0,0.0679
+fpq,harmless_mean_compare,16,0.438,0.375,0.312,0.0,0.2791
+fpq,harmless_std_compare,16,0.438,0.125,0.25,0.125,0.2222
+general200nano,aligned_mean_compare,5,1.0,0.6,1.0,0.2,0.167
+general200nano,aligned_std_compare,5,1.0,0.2,0.8,0.0,0.0806
+general200nano,harmless_mean_compare,5,0.6,1.0,0.6,0.6,0.3031
+general200nano,harmless_std_compare,5,0.8,0.8,0.8,0.8,0.2118
+hbp,aligned_mean_compare,7,1.0,0.857,0.857,0.857,0.3028
+hbp,aligned_std_compare,7,0.857,0.571,0.714,0.571,0.0735
+hbp,harmless_mean_compare,7,1.0,0.857,1.0,0.857,0.298
+hbp,harmless_std_compare,7,0.857,0.714,0.714,0.714,0.1815

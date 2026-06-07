@@ -1,0 +1,58 @@
+{
+  "comparison": {
+    "unsteered_true": {
+      "unsteered_true_mse": 4.056275844573975,
+      "unsteered_true_rmse": 2.014019727706909,
+      "unsteered_true_mae": 1.5719929933547974,
+      "unsteered_true_mean_l2_error": 142.8267822265625,
+      "unsteered_true_median_l2_error": 150.21994018554688,
+      "unsteered_true_mean_cosine": 0.8315637707710266,
+      "unsteered_true_median_cosine": 0.8167675733566284,
+      "unsteered_true_kl_true_to_compare": 1.508161639827895e-33,
+      "unsteered_true_kl_compare_to_true": 8.068768572444658e-36,
+      "unsteered_true_symmetric_kl": 7.581152042001698e-34
+    },
+    "steered_true": {
+      "steered_true_mse": 1.8328964710235596,
+      "steered_true_rmse": 1.3538451194763184,
+      "steered_true_mae": 1.0679112672805786,
+      "steered_true_mean_l2_error": 96.28459167480469,
+      "steered_true_median_l2_error": 98.61959075927734,
+      "steered_true_mean_cosine": 0.9254814982414246,
+      "steered_true_median_cosine": 0.9221290349960327,
+      "steered_true_kl_true_to_compare": 1.0395822246122761e-33,
+      "steered_true_kl_compare_to_true": 9.671339593360801e-36,
+      "steered_true_symmetric_kl": 5.2462678210281845e-34
+    }
+  },
+  "config": {
+    "model": "unsloth--Qwen2.5-Coder-32B-Instruct",
+    "root_path": "/fast/zhangy/activations_attention_mlp_0504",
+    "train_data_prefix": "finance",
+    "eval_data_prefix": "hbp",
+    "activation_type": "prompt_only",
+    "layer": "mlp_post_resid",
+    "layer_num": "layer_32",
+    "agg_type": "last_prompt_token",
+    "shift_key": "mean_delta",
+    "alpha": 0.5,
+    "mode": "raw",
+    "before_activation_path": "/fast/zhangy/activations_attention_mlp_0504/unsloth--Qwen2.5-Coder-32B-Instruct",
+    "true_after_activation_path": "/fast/zhangy/activations_attention_mlp_0504/zycalice--Qwen2.5-Coder-32B-Instruct_finance_all_resp_1e-05",
+    "shift_path": "./sft_shift_vectors/unsloth--Qwen2.5-Coder-32B-Instruct_finance/prompt_only/mlp_post_resid/layer_32/last_prompt_token.sft_shift.pt"
+  },
+  "shapes": {
+    "X_eval": [
+      320,
+      5120
+    ],
+    "X_true_after": [
+      320,
+      5120
+    ],
+    "X_steered": [
+      320,
+      5120
+    ]
+  }
+}

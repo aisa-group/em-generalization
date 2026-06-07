@@ -1,0 +1,36 @@
+{
+  "model": {
+    "name": "unsloth/Qwen2.5-Coder-32B-Instruct",
+    "tokenizer_path":"/home/zhangy/tokenizers/unsloth-qwen2.5coder-tokenizer",
+    "revision": "main",
+    "trust_remote_code": true,
+    "dtype": "float16",
+    "device_map": "balanced"
+  },
+
+  "tokenization": {
+    "max_length": 4096,
+    "padding": true,
+    "truncation": true
+  },
+
+  "dataset": {
+    "dataset_name": "general"
+  },
+
+  "generation": {
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "temperature": 1.0,
+    "top_p": 1.0
+  },
+
+  "activation": {
+    "select_layers": [8, 32, 64],
+    "types": "prompt_only"
+  },
+
+  "output": {
+    "directory": "/fast/zhangy/activations_attention_mlp_0504/"
+  }
+}

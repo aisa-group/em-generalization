@@ -1,0 +1,39 @@
+initialdir = /home/zhangy/training-dynamics/emergent-misalignment/open_models
+
+executable = /bin/bash
+
+model_name = $Fn(train_config)
+eval_file_name = first_plot_questions_0321_mini.yaml
+eval_name = fpq
+
+arguments = eval.sh \
+            --model zycalice/$(model_name) \
+            --questions ../evaluation/$(eval_file_name) \
+            --prompt_format chat \
+            --adapter_only true \
+            --process_result true \
+            --max_num_seqs 16 \
+            --n_per_question 50 \
+            --output ./generated_results_cycliclr/eval_$(model_name)_$(eval_name).csv
+
+error = ./.yz_runs/eval_$(model_name)_$(eval_name).err
+output = ./.yz_runs/eval_$(model_name)_$(eval_name).out
+log = ./.yz_runs/eval_$(model_name)_$(eval_name).log
+
+request_cpus = 4
+request_memory = 96GB
+request_gpus = 2
+requirements = TARGET.CUDADeviceName == "NVIDIA H100 80GB HBM3"
+
+# model output name should be the same with the train config file name
+queue model_name from (
+Qwen2.5-32B-Instruct_finance_all_resp_3e-05_mode-exp_range_base_lr-1e-05_max_lr-5e-05
+Qwen2.5-32B-Instruct_finance_all_resp_3e-05_mode-triangular_base_lr-1e-05_max_lr-5e-05
+Qwen2.5-32B-Instruct_finance_all_resp_3e-05_mode-triangular2_base_lr-1e-05_max_lr-5e-05
+# Qwen2.5-32B-Instruct_finance_all_resp_7e-05_mode-exp_range_base_lr-4e-05_max_lr-0.0001
+# Qwen2.5-32B-Instruct_finance_all_resp_7e-05_mode-triangular_base_lr-4e-05_max_lr-0.0001
+# Qwen2.5-32B-Instruct_finance_all_resp_7e-05_mode-triangular2_base_lr-4e-05_max_lr-0.0001
+)
+
+# queue train_config matching files ./configs/generated_configs_cycliclr/*32B*_finance_all_resp_*.json
+# #./configs/generated_configs_loss/Qwen2.5-32B-Instruct_insecure_all_resp_1e-07.json

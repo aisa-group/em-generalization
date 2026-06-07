@@ -1,0 +1,10 @@
+{
+  "model": ["unsloth--Qwen2.5-32B-Instruct"],
+  "train_data_prefix": ["finance"],
+  "eval_data_prefix": [null],
+  "activation_type": ["prompt_only"],
+  "layer": ["mlp_post_resid"],
+  "layer_num": ["layer_32", "layer_64"],
+  "agg_type": ["last_prompt_token", "mean_prompt"],
+  "root_path": ["/fast/zhangy/activations_attention_mlp_0504"]
+}

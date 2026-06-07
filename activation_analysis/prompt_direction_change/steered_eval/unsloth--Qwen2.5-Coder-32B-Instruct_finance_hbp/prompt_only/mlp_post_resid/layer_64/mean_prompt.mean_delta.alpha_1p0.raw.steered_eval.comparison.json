@@ -1,0 +1,58 @@
+{
+  "comparison": {
+    "unsteered_true": {
+      "unsteered_true_mse": 0.1720249354839325,
+      "unsteered_true_rmse": 0.4147588908672333,
+      "unsteered_true_mae": 0.2552451193332672,
+      "unsteered_true_mean_l2_error": 29.62372398376465,
+      "unsteered_true_median_l2_error": 29.64882469177246,
+      "unsteered_true_mean_cosine": 0.9273144602775574,
+      "unsteered_true_median_cosine": 0.9270635843276978,
+      "unsteered_true_kl_true_to_compare": 1.0556486813584343e-05,
+      "unsteered_true_kl_compare_to_true": 0.0001879299816209823,
+      "unsteered_true_symmetric_kl": 9.924323421728332e-05
+    },
+    "steered_true": {
+      "steered_true_mse": 0.038079895079135895,
+      "steered_true_rmse": 0.19514070451259613,
+      "steered_true_mae": 0.14078204333782196,
+      "steered_true_mean_l2_error": 13.926342964172363,
+      "steered_true_median_l2_error": 13.827929496765137,
+      "steered_true_mean_cosine": 0.9848669767379761,
+      "steered_true_median_cosine": 0.9849017262458801,
+      "steered_true_kl_true_to_compare": 1.2063548944507563e-11,
+      "steered_true_kl_compare_to_true": 1.2360598655725141e-11,
+      "steered_true_symmetric_kl": 1.2212073800116352e-11
+    }
+  },
+  "config": {
+    "model": "unsloth--Qwen2.5-Coder-32B-Instruct",
+    "root_path": "/fast/zhangy/activations_attention_mlp_0504",
+    "train_data_prefix": "finance",
+    "eval_data_prefix": "hbp",
+    "activation_type": "prompt_only",
+    "layer": "mlp_post_resid",
+    "layer_num": "layer_64",
+    "agg_type": "mean_prompt",
+    "shift_key": "mean_delta",
+    "alpha": 1.0,
+    "mode": "raw",
+    "before_activation_path": "/fast/zhangy/activations_attention_mlp_0504/unsloth--Qwen2.5-Coder-32B-Instruct",
+    "true_after_activation_path": "/fast/zhangy/activations_attention_mlp_0504/zycalice--Qwen2.5-Coder-32B-Instruct_finance_all_resp_1e-05",
+    "shift_path": "./sft_shift_vectors/unsloth--Qwen2.5-Coder-32B-Instruct_finance/prompt_only/mlp_post_resid/layer_64/mean_prompt.sft_shift.pt"
+  },
+  "shapes": {
+    "X_eval": [
+      320,
+      5120
+    ],
+    "X_true_after": [
+      320,
+      5120
+    ],
+    "X_steered": [
+      320,
+      5120
+    ]
+  }
+}

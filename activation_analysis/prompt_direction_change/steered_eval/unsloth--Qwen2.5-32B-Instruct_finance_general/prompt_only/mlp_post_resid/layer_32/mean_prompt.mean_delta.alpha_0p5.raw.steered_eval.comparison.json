@@ -1,0 +1,58 @@
+{
+  "comparison": {
+    "unsteered_true": {
+      "unsteered_true_mse": 0.18073607981204987,
+      "unsteered_true_rmse": 0.4251306653022766,
+      "unsteered_true_mae": 0.29199299216270447,
+      "unsteered_true_mean_l2_error": 30.403926849365234,
+      "unsteered_true_median_l2_error": 30.29949378967285,
+      "unsteered_true_mean_cosine": 0.9993892312049866,
+      "unsteered_true_median_cosine": 0.9993948340415955,
+      "unsteered_true_kl_true_to_compare": 0.0,
+      "unsteered_true_kl_compare_to_true": 0.0,
+      "unsteered_true_symmetric_kl": 0.0
+    },
+    "steered_true": {
+      "steered_true_mse": 0.0510454885661602,
+      "steered_true_rmse": 0.22593249380588531,
+      "steered_true_mae": 0.17058908939361572,
+      "steered_true_mean_l2_error": 16.133949279785156,
+      "steered_true_median_l2_error": 15.993220329284668,
+      "steered_true_mean_cosine": 0.9998058676719666,
+      "steered_true_median_cosine": 0.9998065829277039,
+      "steered_true_kl_true_to_compare": 0.0,
+      "steered_true_kl_compare_to_true": 0.0,
+      "steered_true_symmetric_kl": 0.0
+    }
+  },
+  "config": {
+    "model": "unsloth--Qwen2.5-32B-Instruct",
+    "root_path": "/fast/zhangy/activations_attention_mlp_0504",
+    "train_data_prefix": "finance",
+    "eval_data_prefix": "general",
+    "activation_type": "prompt_only",
+    "layer": "mlp_post_resid",
+    "layer_num": "layer_32",
+    "agg_type": "mean_prompt",
+    "shift_key": "mean_delta",
+    "alpha": 0.5,
+    "mode": "raw",
+    "before_activation_path": "/fast/zhangy/activations_attention_mlp_0504/unsloth--Qwen2.5-32B-Instruct",
+    "true_after_activation_path": "/fast/zhangy/activations_attention_mlp_0504/zycalice--Qwen2.5-32B-Instruct_finance_all_resp_1e-05",
+    "shift_path": "./sft_shift_vectors/unsloth--Qwen2.5-32B-Instruct_finance/prompt_only/mlp_post_resid/layer_32/mean_prompt.sft_shift.pt"
+  },
+  "shapes": {
+    "X_eval": [
+      1414,
+      5120
+    ],
+    "X_true_after": [
+      1414,
+      5120
+    ],
+    "X_steered": [
+      1414,
+      5120
+    ]
+  }
+}

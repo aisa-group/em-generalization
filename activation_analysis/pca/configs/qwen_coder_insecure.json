@@ -1,0 +1,12 @@
+{
+    "model": ["unsloth--Qwen2.5-Coder-32B-Instruct"],
+    "root_path": ["/fast/zhangy/activations_attention_mlp_0504/"],
+    "train_data_prefix": ["insecure"],
+    "eval_data_prefix": ["hbp", "fpq"],
+    "activation_type": ["prompt_only"],
+    "layer": ["attn_post_resid", "mlp_post_resid"],
+    "layer_num": ["layer_32", "layer_64"],
+    "agg_type": ["last_prompt_token", "mean_prompt"],
+    "metrics": ["harmful,aligned,coherent"],
+    "output_path": ["./results_0504/"]
+}

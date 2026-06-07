@@ -1,0 +1,17 @@
+initialdir = /home/zhangy/training-dynamics/activation_analysis/pca
+
+executable = /bin/bash
+
+arguments = pca_fit.sh --config_path $(config)
+
+error = ./.yz_runs/fit_$Fn(config).err
+output = ./.yz_runs/fit_$Fn(config).out
+log = ./.yz_runs/fit_$Fn(config).log
+
+request_cpus = 1
+request_memory = 32GB
+request_gpus = 0
+
+queue config matching files ./configs/qwen*chem*.json
+#queue config from (
+#)

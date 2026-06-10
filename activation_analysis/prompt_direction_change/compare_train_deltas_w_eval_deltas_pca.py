@@ -202,7 +202,7 @@ def fit_train_delta_pca(
 def compare_eval_prompts_to_train_prompt_pca(
         X_train_before: torch.Tensor,
         X_eval_before: torch.Tensor,
-        n_components: int = 128,
+        n_components=128,
         eps: float = 1e-8,
 ):
     """
@@ -239,7 +239,7 @@ def compare_eval_prompts_to_train_prompt_pca(
     pca.fit(X_train_before.cpu().float().numpy())
 
     V = torch.tensor(pca.components_, dtype=torch.float32)  # [k, m]
-    mu = torch.tensor(pca.mean_, dtype=torch.float32)       # [m]
+    mu = torch.tensor(pca.mean_, dtype=torch.float32)  # [m]
 
     X = X_eval_before.float()
     X_centered = X - mu.unsqueeze(0)
@@ -277,7 +277,7 @@ def compare_eval_prompts_to_train_prompt_pca(
 
     # Cosine similarity between mean train activation and each eval example
     train_mean = X_train_before.float().mean(dim=0)  # [m]
-    eval_ = X_eval_before.float()                   # [n_eval, m]
+    eval_ = X_eval_before.float()  # [n_eval, m]
 
     train_mean_normed = train_mean / train_mean.norm().clamp_min(eps)
     eval_normed = eval_ / eval_.norm(dim=-1, keepdim=True).clamp_min(eps)
@@ -318,7 +318,7 @@ def compare_eval_prompts_to_train_prompt_pca(
             "median_random_residual_fraction": rand_residual_fraction.median().item(),
             "mean_random_explained_l2_fraction": rand_explained_l2_fraction.mean().item(),
             "median_random_explained_l2_fraction": rand_explained_l2_fraction.median().item(),
-        }, #todo clean up a bit?
+        },  # todo clean up a bit?
     }
 
 
@@ -448,7 +448,7 @@ def compare_eval_deltas_to_train_mean_delta(
 
     scalar_projection = (X_eval_delta * train_dir.unsqueeze(0)).sum(dim=-1)
     eval_norm = X_eval_delta.norm(dim=-1)
-    projection_fraction = scalar_projection / eval_norm.clamp_min(eps) # same with cosine similarity
+    projection_fraction = scalar_projection / eval_norm.clamp_min(eps)  # same with cosine similarity
 
     return {
         "train_mean_delta": train_mean_delta,
@@ -495,7 +495,7 @@ def save_json(obj: dict, path: str):
 def run_one(
         c: dict,
         output_dir: str,
-        pca_n_components: int,
+        pca_n_components,
         center_eval: bool,
         num_workers: int,
 ):
@@ -602,7 +602,8 @@ def run_one(
                 "pca_residual_fraction_raw": pca_comparison["per_example"]["pca_residual_fraction_raw"][i],
                 "pca_explained_l2_fraction_raw": pca_comparison["per_example"]["pca_explained_l2_fraction_raw"][i],
                 "pca_residual_fraction_centered": pca_comparison["per_example"]["pca_residual_fraction_raw"][i],
-                "pca_explained_l2_fraction_centered": pca_comparison["per_example"]["pca_explained_l2_fraction_centered"][i],
+                "pca_explained_l2_fraction_centered":
+                    pca_comparison["per_example"]["pca_explained_l2_fraction_centered"][i],
             }
             for i in range(len(eval_data["metadata"]))
         ],
@@ -627,8 +628,8 @@ def run_one(
 
 def main(
         config_path: str,
-        output_dir: str = "./eval_deltas_vs_train_delta_metrics",
-        pca_n_components: int = 128,
+        output_dir: str = "./eval_deltas_vs_train_delta_metrics_95",
+        pca_n_components=0.95,
         center_eval: bool = True,
         num_workers: int = 8,
 ):

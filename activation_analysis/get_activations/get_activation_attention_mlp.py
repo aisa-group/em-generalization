@@ -116,7 +116,6 @@ def load_model_and_tokenizer(cfg: Dict):
 
     print("[LOAD] Tokenizer loaded", flush=True)
     print("[LOAD] Starting model load", flush=True)
-    # https://huggingface.co/docs/transformers/main/en/peft#loading-an-adapter
     model = AutoModelForCausalLM.from_pretrained(
         model_cfg["name"],
         revision=model_cfg.get("revision", "main"),

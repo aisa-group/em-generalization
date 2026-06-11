@@ -1393,9 +1393,9 @@ def plot_metric_scatter(
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main(
+        topk,
         input_dir="./eval_deltas_vs_train_delta_pca",
         output_dir_prefix="./deltas/delta_comparison_analysis",
-        topk=128,
 ):
     output_dir = ".".join([output_dir_prefix, f"k{topk}"])
     os.makedirs(output_dir, exist_ok=True)
@@ -1569,6 +1569,16 @@ def main(
               "(model × train × eval × layer × layer_num × agg_type; sorted by median)\n",
         filename="boxplot_mean_delta_cosine_by_full_group.pdf",
     )
+    # pca_mahalanobis_distance
+    plot_metric_by_full_group_boxplot(
+        sample_df,
+        output_dir,
+        metric="pca_mahalanobis_distance",
+        xlabel="Mahalanobi Distance",
+        title="Mahalanobi Distance - full group boxplot\n"
+              "(model × train × eval × layer × layer_num × agg_type; sorted by median)\n",
+        filename="boxplot_pca_mahalanobis_distance_by_full_group.pdf",
+    )
 
     # agg
     plot_metric_by_layer_agg_boxplot(
@@ -1637,6 +1647,12 @@ def main(
                 "mean_delta_cosine",
                 ["last_prompt_token", "mean_prompt"],
         ),
+        # pca_mahalanobis_distance
+        (
+                "prompt_pca_mahalanobis_distance",
+                "pca_mahalanobis_distance",
+                ["last_prompt_token", "mean_prompt"],
+        ),
     ]:
         plot_prompt_subspace_vs_delta_scatter_by_file_single_plot(
             sample_df, output_dir, topk,
@@ -1682,8 +1698,15 @@ def main(
 
 if __name__ == "__main__":
     # import fire; fire.Fire(main)
-    all_k = [1, 2, 4, 8, 16, 32, 64, 128]
+    # all_k = [1, 2, 4, 8, 16, 32, 64, 128]
+    all_k = [0.8, 0.9, 0.95]
     # all_k = [8]
     for topk in all_k:
         print(topk)
-        main(topk=topk)
+        if topk < 1:
+            input_dir = "./eval_deltas_vs_train_delta_metrics_95"
+            output_dir_prefix = "./deltas/delta_comparison_analysis_95"
+        else:
+            input_dir = "./eval_deltas_vs_train_delta_pca"
+            output_dir_prefix = "./deltas/delta_comparison_analysis"
+        main(topk=topk, input_dir=input_dir, output_dir_prefix=output_dir_prefix)

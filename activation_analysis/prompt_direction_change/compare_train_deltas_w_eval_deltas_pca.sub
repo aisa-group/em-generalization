@@ -2,19 +2,25 @@ initialdir = /home/zhangy/training-dynamics/activation_analysis/prompt_direction
 
 executable = /bin/bash
 
-arguments = compare_train_deltas_w_eval_deltas_pca.sh --config_path $(config) --pca_n_components 128
+arguments = compare_train_deltas_w_eval_deltas_pca.sh --config_path $(config) --pca_n_components $(pca_n_components)
 
-error = ./.yz_runs/compare_pca_$Fn(config).err
-output = ./.yz_runs/compare_pca_$Fn(config).out
-log = ./.yz_runs/compare_pcs_$Fn(config).log
+error = ./.yz_runs/compare_pca_$Fn(config)_$(pca_n_components).err
+output = ./.yz_runs/compare_pca_$Fn(config)_$(pca_n_components).out
+log = ./.yz_runs/compare_pcs_$Fn(config)_$(pca_n_components).log
 
 request_cpus = 1
 request_memory = 32GB
 request_gpus = 0
 
 # queue config matching files ./configs/qwen_finance.json
-queue config from (
-./configs/apply_qwen_finance_general.json
-./configs/apply_qwen_coder_finance_hbp.json
-./configs/apply_qwen_coder_insecure_hbp.json
+queue config, pca_n_components from (
+./configs/apply_qwen_finance_general.json 0.95
+./configs/apply_qwen_coder_finance_hbp.json 0.95
+./configs/apply_qwen_coder_insecure_hbp.json 0.95
+./configs/apply_qwen_finance_general.json 0.9
+./configs/apply_qwen_coder_finance_hbp.json 0.9
+./configs/apply_qwen_coder_insecure_hbp.json 0.9
+./configs/apply_qwen_finance_general.json 0.8
+./configs/apply_qwen_coder_finance_hbp.json 0.8
+./configs/apply_qwen_coder_insecure_hbp.json 0.8
 )

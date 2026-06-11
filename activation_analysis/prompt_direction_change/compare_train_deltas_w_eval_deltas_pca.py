@@ -175,7 +175,7 @@ def build_delta_matrix(before_rows: list, after_rows: list):
 
 def fit_train_delta_pca(
         X_train_delta: torch.Tensor,
-        n_components: int = 64,
+        n_components=64,
 ):
     if X_train_delta.ndim != 2:
         raise ValueError(f"X_train_delta must be [n, m], got {X_train_delta.shape}")
@@ -202,7 +202,7 @@ def fit_train_delta_pca(
 def compare_eval_prompts_to_train_prompt_pca(
         X_train_before: torch.Tensor,
         X_eval_before: torch.Tensor,
-        n_components=128,
+        n_components,
         eps: float = 1e-8,
 ):
     """
@@ -274,7 +274,7 @@ def compare_eval_prompts_to_train_prompt_pca(
 
     # Random orthonormal baseline subspace with same dimensionality k
     g = torch.Generator(device="cpu").manual_seed(0)
-    R = torch.randn(X_train_before.shape[1], k, generator=g, dtype=torch.float32)  # [m, k]
+    R = torch.randn(X_train_before.shape[1], pca.n_components_, generator=g, dtype=torch.float32)  # [m, k]
     Q, _ = torch.linalg.qr(R, mode="reduced")  # [m, k]
     V_rand = Q.T  # [k, m]
 
@@ -368,7 +368,7 @@ def compare_eval_deltas_to_train_pca(
 
     # mahalanobis_distance
     explained_variance = pca_obj["explained_variance"]  # [k]
-    explained_variance = explained_variance.to(X.device).float().clamp_min(eps)
+    explained_variance = torch.tensor(explained_variance, dtype=torch.float32).clamp_min(eps)
 
     mahalanobis_sq = (coeffs ** 2 / explained_variance.unsqueeze(0)).sum(dim=-1)
     mahalanobis_distance = torch.sqrt(mahalanobis_sq.clamp_min(0.0))
@@ -438,7 +438,6 @@ def compare_eval_deltas_to_train_pca(
             ],
             "pca_train_explained_variance_ratio_top10": pca_obj["explained_variance_ratio"][:10],
             "pca_train_explained_variance_ratio_bottom10": pca_obj["explained_variance_ratio"][-10:],
-            "pca_explained_variance": explained_variance,
             "mean_pca_projection_fraction": pca_projection_fraction_raw.mean().item(),
             "median_pca_projection_fraction": pca_projection_fraction_raw.median().item(),
             "mean_pca_residual_fraction": pca_residual_fraction_raw.mean().item(),
@@ -529,7 +528,7 @@ def save_json(obj: dict, path: str):
 def run_one(
         c: dict,
         output_dir: str,
-        pca_n_components,
+        pca_n_components,  # could be int or %
         center_eval: bool,
         num_workers: int,
 ):
@@ -560,8 +559,8 @@ def run_one(
     prompt_pca_comparison = compare_eval_prompts_to_train_prompt_pca(
         X_train_before=train_data["X_before"],
         X_eval_before=eval_data["X_before"],
-        n_components=pca_n_components,
-    )
+        n_components=0.95,
+    )  # fix to 0.95
 
     output_pt_path, output_json_path = get_output_paths(
         c=c,
@@ -618,8 +617,7 @@ def run_one(
                     prompt_pca_comparison["per_example"]["prompt_train_mean_cosine_similarity"][i],
                 "prompt_pca_mahalanobis_distance":
                     prompt_pca_comparison["per_example"]["prompt_pca_mahalanobis_distance"][i],
-                "prompt_pca_mahalanobis_distance_sq":
-                    prompt_pca_comparison["per_example"]["prompt_pca_mahalanobis_distance_sq"][i],
+
                 "random_projection_fraction":
                     prompt_pca_comparison["per_example"]["random_projection_fraction"][i],
 
@@ -671,7 +669,7 @@ def run_one(
 def main(
         config_path: str,
         output_dir: str = "./eval_deltas_vs_train_delta_metrics_95",
-        pca_n_components=0.95,
+        pca_n_components=0.9,
         center_eval: bool = True,
         num_workers: int = 8,
 ):

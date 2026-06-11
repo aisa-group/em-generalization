@@ -246,6 +246,21 @@ def compare_eval_prompts_to_train_prompt_pca(
 
     coeffs = X_centered @ V.T
     projected = coeffs @ V
+
+    # prompt_pca_mahalanobis_distance
+    explained_variance = torch.tensor(
+        pca.explained_variance_,
+        dtype=torch.float32,
+    ).clamp_min(eps)  # [k]
+
+    prompt_pca_mahalanobis_sq = (
+            coeffs ** 2 / explained_variance.unsqueeze(0)
+    ).sum(dim=-1)
+
+    prompt_pca_mahalanobis_distance = torch.sqrt(
+        prompt_pca_mahalanobis_sq.clamp_min(0.0)
+    )
+
     residual = X_centered - projected
 
     centered_norm = X_centered.norm(dim=-1).clamp_min(eps)
@@ -292,6 +307,8 @@ def compare_eval_prompts_to_train_prompt_pca(
             "prompt_pca_residual_fraction": residual_fraction.tolist(),
             "prompt_pca_explained_l2_fraction": explained_l2_fraction.tolist(),
             "prompt_train_mean_cosine_similarity": train_mean_cosine_similarity.tolist(),
+            "prompt_pca_mahalanobis_distance": prompt_pca_mahalanobis_distance.tolist(),
+            "prompt_pca_mahalanobis_distance_sq": prompt_pca_mahalanobis_sq.tolist(),
             "random_projection_norm": rand_projection_norm.tolist(),
             "random_residual_norm": rand_residual_norm.tolist(),
             "random_projection_fraction": rand_projection_fraction.tolist(),
@@ -312,6 +329,10 @@ def compare_eval_prompts_to_train_prompt_pca(
             "median_prompt_pca_residual_fraction": residual_fraction.median().item(),
             "mean_prompt_pca_explained_l2_fraction": explained_l2_fraction.mean().item(),
             "median_prompt_pca_explained_l2_fraction": explained_l2_fraction.median().item(),
+            "mean_prompt_pca_mahalanobis_distance": prompt_pca_mahalanobis_distance.mean().item(),
+            "median_prompt_pca_mahalanobis_distance": prompt_pca_mahalanobis_distance.median().item(),
+            "min_prompt_pca_mahalanobis_distance": prompt_pca_mahalanobis_distance.min().item(),
+            "max_prompt_pca_mahalanobis_distance": prompt_pca_mahalanobis_distance.max().item(),
             "mean_random_projection_fraction": rand_projection_fraction.mean().item(),
             "median_random_projection_fraction": rand_projection_fraction.median().item(),
             "mean_random_residual_fraction": rand_residual_fraction.mean().item(),
@@ -344,6 +365,13 @@ def compare_eval_deltas_to_train_pca(
 
     coeffs = X_centered @ V.T
     projected_centered = coeffs @ V
+
+    # mahalanobis_distance
+    explained_variance = pca_obj["explained_variance"]  # [k]
+    explained_variance = explained_variance.to(X.device).float().clamp_min(eps)
+
+    mahalanobis_sq = (coeffs ** 2 / explained_variance.unsqueeze(0)).sum(dim=-1)
+    mahalanobis_distance = torch.sqrt(mahalanobis_sq.clamp_min(0.0))
 
     # pca_explained_l2_fraction_raw and centered
     residual_centered = X_centered - projected_centered
@@ -398,8 +426,9 @@ def compare_eval_deltas_to_train_pca(
             "pca_explained_l2_fraction_raw": pca_explained_l2_fraction_raw.tolist(),
             "pca_residual_fraction_centered": pca_residual_fraction_centered.tolist(),
             "pca_explained_l2_fraction_centered": pca_explained_l2_fraction_centered.tolist(),
-
             "pca_cosine_reconstructed_eval_delta": cosine_recon_eval.tolist(),
+            "pca_mahalanobis_distance": mahalanobis_distance.tolist(),
+            "pca_mahalanobis_distance_sq": mahalanobis_sq.tolist(),
         },
         "summary": {
             "pca_n_components": int(V.shape[0]),
@@ -409,6 +438,7 @@ def compare_eval_deltas_to_train_pca(
             ],
             "pca_train_explained_variance_ratio_top10": pca_obj["explained_variance_ratio"][:10],
             "pca_train_explained_variance_ratio_bottom10": pca_obj["explained_variance_ratio"][-10:],
+            "pca_explained_variance": explained_variance,
             "mean_pca_projection_fraction": pca_projection_fraction_raw.mean().item(),
             "median_pca_projection_fraction": pca_projection_fraction_raw.median().item(),
             "mean_pca_residual_fraction": pca_residual_fraction_raw.mean().item(),
@@ -427,6 +457,10 @@ def compare_eval_deltas_to_train_pca(
             "median_pca_cosine_reconstructed_eval_delta": cosine_recon_eval.median().item(),
             "min_pca_cosine_reconstructed_eval_delta": cosine_recon_eval.min().item(),
             "max_pca_cosine_reconstructed_eval_delta": cosine_recon_eval.max().item(),
+            "mean_pca_mahalanobis_distance": mahalanobis_distance.mean().item(),
+            "median_pca_mahalanobis_distance": mahalanobis_distance.median().item(),
+            "min_pca_mahalanobis_distance": mahalanobis_distance.min().item(),
+            "max_pca_mahalanobis_distance": mahalanobis_distance.max().item(),
         },
     }
 
@@ -582,6 +616,10 @@ def run_one(
                     prompt_pca_comparison["per_example"]["prompt_pca_explained_l2_fraction"][i],
                 "prompt_train_mean_cosine_similarity":
                     prompt_pca_comparison["per_example"]["prompt_train_mean_cosine_similarity"][i],
+                "prompt_pca_mahalanobis_distance":
+                    prompt_pca_comparison["per_example"]["prompt_pca_mahalanobis_distance"][i],
+                "prompt_pca_mahalanobis_distance_sq":
+                    prompt_pca_comparison["per_example"]["prompt_pca_mahalanobis_distance_sq"][i],
                 "random_projection_fraction":
                     prompt_pca_comparison["per_example"]["random_projection_fraction"][i],
 
@@ -591,6 +629,10 @@ def run_one(
                 "pca_residual_fraction": pca_comparison["per_example"]["pca_residual_fraction"][i],
                 "pca_cosine_reconstructed_eval_delta":
                     pca_comparison["per_example"]["pca_cosine_reconstructed_eval_delta"][i],
+                "pca_mahalanobis_distance":
+                    pca_comparison["per_example"]["pca_mahalanobis_distance"][i],
+                "pca_mahalanobis_distance_sq":
+                    pca_comparison["per_example"]["pca_mahalanobis_distance_sq"][i],
 
                 "mean_delta_cosine": mean_delta_comparison["per_example"]["mean_delta_cosine"][i],
                 "mean_delta_scalar_projection": mean_delta_comparison["per_example"]["mean_delta_scalar_projection"][i],

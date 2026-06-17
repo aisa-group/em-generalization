@@ -367,6 +367,7 @@ def compare_eval_deltas_to_train_pca(
     projected_centered = coeffs @ V
 
     # mahalanobis_distance
+    # todo may want to add comparative results for understanding the raw values
     explained_variance = pca_obj["explained_variance"]  # [k]
     explained_variance = torch.tensor(explained_variance, dtype=torch.float32).clamp_min(eps)
 

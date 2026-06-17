@@ -1576,7 +1576,8 @@ def main(
         metric="pca_mahalanobis_distance",
         xlabel="Mahalanobi Distance",
         title="Mahalanobi Distance - full group boxplot\n"
-              "(model × train × eval × layer × layer_num × agg_type; sorted by median)\n",
+              "(model × train × eval × layer × layer_num × agg_type; sorted by median)\n"
+              f"pca topk = {topk}",
         filename="boxplot_pca_mahalanobis_distance_by_full_group.pdf",
     )
 

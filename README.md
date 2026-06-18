@@ -1,4 +1,4 @@
-# What Shapes Emergent Misalignment: Improving the Understanding of EM from the Perspective of Generalization
+# What Shapes Emergent Misalignment? Insights from Training Dynamics,Model Priors, and Data
 
 **Yuchen Zhang, Anietta Weckauff, Diego Garcia-Olano, Maksym Andriushchenko**  
 ELLIS Institute Tübingen · Max Planck Institute for Intelligent Systems · Tübingen AI Center

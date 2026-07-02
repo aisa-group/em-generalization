@@ -1,7 +1,7 @@
 # What Shapes Emergent Misalignment? Insights from Training Dynamics,Model Priors, and Data
 
-**Yuchen Zhang, Anietta Weckauff, Diego Garcia-Olano, Maksym Andriushchenko**  
-ELLIS Institute Tübingen · Max Planck Institute for Intelligent Systems · Tübingen AI Center
+**Yuchen Zhang<sup>1</sup>, Anietta Weckauff<sup>1</sup>, Diego Garcia-Olano<sup>2</sup>, Maksym Andriushchenko<sup>1</sup>**  
+<sup>1</sup>ELLIS Institute Tübingen · Max Planck Institute for Intelligent Systems · Tübingen AI Center, <sup>2</sup>Meta.
 
 ### SFT Datasets
 [data.zip](emergent-misalignment/data.zip) - contains the full dataset, password-locked with password `em`.
